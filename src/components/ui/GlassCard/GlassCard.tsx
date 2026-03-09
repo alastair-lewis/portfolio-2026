@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {classNames} from '../../../utils/classNames';
 import styles from './GlassCard.module.css';
 
 interface GlassCardProps {
@@ -9,6 +10,6 @@ interface GlassCardProps {
 }
 
 export function GlassCard({children, className, as: Tag = 'div'}: GlassCardProps) {
-  const cls = [styles.card, className].filter(Boolean).join(' ');
+  const cls = classNames(styles.card, className);
   return <Tag className={cls}>{children}</Tag>;
 }

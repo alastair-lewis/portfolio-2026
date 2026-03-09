@@ -1,4 +1,5 @@
 import type {TagVariant} from '../../../data/types';
+import {classNames} from '../../../utils/classNames';
 import styles from './Tag.module.css';
 
 interface TagProps {
@@ -7,5 +8,5 @@ interface TagProps {
 }
 
 export function Tag({label, variant}: TagProps) {
-  return <span className={[styles.tag, styles[variant]].join(' ')}>{label}</span>;
+  return <span className={classNames(styles.tag, styles[variant])}>{label}</span>;
 }

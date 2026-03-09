@@ -1,3 +1,4 @@
+import {classNames} from '../../../utils/classNames';
 import styles from './LanguageToggle.module.css';
 
 // i18n wiring will be added in a later pass
@@ -20,7 +21,7 @@ export function LanguageToggle({current = 'en', onChange}: LanguageToggleProps) 
         <button
           key={code}
           type="button"
-          className={[styles.option, current === code ? styles.active : ''].join(' ')}
+          className={classNames(styles.option, current === code && styles.active)}
           onClick={() => onChange?.(code)}
           aria-pressed={current === code}
           lang={code}

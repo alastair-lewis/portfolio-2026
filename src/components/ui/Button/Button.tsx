@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {classNames} from '../../../utils/classNames';
 import styles from './Button.module.css';
 
 interface ButtonProps {
@@ -22,7 +23,7 @@ export function Button({
   target,
   rel,
 }: ButtonProps) {
-  const cls = [styles.button, styles[variant], className].filter(Boolean).join(' ');
+  const cls = classNames(styles.button, styles[variant], className);
 
   if (href) {
     const isExternal = href.startsWith('http');
