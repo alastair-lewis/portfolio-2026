@@ -1,0 +1,73 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-20) var(--space-6);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+/* ---- Project card ---- */
+.card {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.accent {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.accent1 { background: linear-gradient(135deg, var(--coral) 0%, var(--orange) 100%); }
+.accent2 { background: linear-gradient(135deg, var(--teal) 0%, var(--coral) 100%); }
+.accent3 { background: linear-gradient(135deg, var(--orange) 0%, var(--teal) 100%); }
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.stackLabel {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.cardFooter {
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--card-border);
+}
