@@ -13,7 +13,7 @@ describe('Contact', () => {
     render(<Contact />);
     expect(screen.getByRole('link', {name: /send me an email/i})).toHaveAttribute(
       'href',
-      'mailto:hello@alastairlewis.dev',
+      'mailto:alastair.lewis10@gmail.com',
     );
   });
 

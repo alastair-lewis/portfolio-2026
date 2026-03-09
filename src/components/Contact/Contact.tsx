@@ -11,7 +11,7 @@ export function Contact() {
 
         <GlassCard className={styles.card}>
           <div className={styles.links}>
-            <Button variant="primary" href="mailto:hello@alastairlewis.dev">
+            <Button variant="primary" href="mailto:alastair.lewis10@gmail.com">
               Send me an email
             </Button>
             <Button variant="secondary" href="https://github.com/alastair-lewis">
