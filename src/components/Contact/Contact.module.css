@@ -1,0 +1,37 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-20) var(--space-6);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  padding: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-8);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
