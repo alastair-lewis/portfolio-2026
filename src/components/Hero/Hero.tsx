@@ -5,16 +5,11 @@ export function Hero() {
   return (
     <section className={styles.section} aria-labelledby="hero-heading">
       <div className={styles.inner}>
-        <div className={styles.badge} aria-label="Status: open to conversations">
-          <span className={styles.badgeDot} aria-hidden="true" />
-          Open to conversations
-        </div>
-
         <h1 id="hero-heading" className={styles.name}>
           Alastair Lewis
         </h1>
 
-        <p className={styles.role}>Senior Software Engineer at Shopify</p>
+        <p className={styles.role}>Senior Software Engineer</p>
         <p className={styles.tagline}>
           Frontend architecture, accessibility, and building things that scale.
         </p>

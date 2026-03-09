@@ -9,14 +9,9 @@ describe('Hero', () => {
     expect(screen.getByRole('heading', {level: 1, name: 'Alastair Lewis'})).toBeInTheDocument();
   });
 
-  it('renders the status badge', () => {
-    render(<Hero />);
-    expect(screen.getByText('Open to conversations')).toBeInTheDocument();
-  });
-
   it('renders the role text', () => {
     render(<Hero />);
-    expect(screen.getByText(/Senior Software Engineer at Shopify/i)).toBeInTheDocument();
+    expect(screen.getByText(/Senior Software Engineer/i)).toBeInTheDocument();
   });
 
   it('renders the CTA links with correct hrefs', () => {
