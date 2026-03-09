@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-20) var(--space-6);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.institution {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.degree {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.years {
+  font-size: 0.8125rem;
+  color: var(--teal);
+  font-weight: 500;
+  font-family: var(--font-mono);
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
