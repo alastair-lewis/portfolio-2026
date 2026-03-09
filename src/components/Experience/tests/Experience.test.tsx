@@ -2,6 +2,7 @@ import {describe, it, expect} from 'vitest';
 import {render, screen} from '@testing-library/react';
 
 import {Experience} from '../Experience';
+import {experience} from '../../../data/portfolio';
 
 describe('Experience', () => {
   it('renders the section heading', () => {
@@ -9,26 +10,29 @@ describe('Experience', () => {
     expect(screen.getByRole('heading', {level: 2})).toBeInTheDocument();
   });
 
-  it('renders Shopify as a company', () => {
+  it('renders a heading for every company', () => {
     render(<Experience />);
-    expect(screen.getByText('Shopify')).toBeInTheDocument();
+    for (const entry of experience) {
+      expect(screen.getByText(entry.company)).toBeInTheDocument();
+    }
   });
 
-  it('renders IBM as a company', () => {
+  it('renders a linked company name when a url is provided', () => {
     render(<Experience />);
-    expect(screen.getByText('IBM')).toBeInTheDocument();
+    for (const entry of experience.filter((e) => e.url)) {
+      const link = screen.getByRole('link', {name: entry.company});
+      expect(link).toHaveAttribute('href', entry.url);
+      expect(link).toHaveAttribute('target', '_blank');
+    }
   });
 
-  it('renders a Shopify link to shopify.com', () => {
+  it('renders all role titles', () => {
     render(<Experience />);
-    const link = screen.getByRole('link', {name: 'Shopify'});
-    expect(link).toHaveAttribute('href', 'https://shopify.com');
-    expect(link).toHaveAttribute('target', '_blank');
-  });
-
-  it('renders role titles', () => {
-    render(<Experience />);
-    expect(screen.getByText('Senior Software Engineer')).toBeInTheDocument();
+    for (const entry of experience) {
+      for (const role of entry.roles) {
+        expect(screen.getByText(role.title)).toBeInTheDocument();
+      }
+    }
   });
 
   it('renders the section inside an id=experience element', () => {
