@@ -1,0 +1,61 @@
+.section {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-20) var(--space-6);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  padding: var(--space-10) var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.prose p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.stackBox {
+  background: var(--accent-grad-subtle);
+  border: 1px solid rgba(78, 205, 196, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.stackLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-3);
+}
+
+.stackText {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 700px) {
+  .card {
+    grid-template-columns: 1fr;
+    padding: var(--space-8);
+    gap: var(--space-8);
+  }
+}
