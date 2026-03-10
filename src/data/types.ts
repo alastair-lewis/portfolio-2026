@@ -22,11 +22,14 @@ export interface ExperienceEntry {
 export interface Project {
   id: string;
   title: string;
-  description: string;
+  logoFile: string;
+  description: string[];
   accentVariant: 1 | 2 | 3;
-  stackLabel: string;
+  role: string;
   tags: PortfolioTag[];
   url?: string;
+  urlNote?: string;
+  comingSoon?: boolean;
 }
 
 export interface EducationEntry {
