@@ -79,13 +79,12 @@ export const experience: ExperienceEntry[] = [
     roles: [
       {
         title: 'Senior Software Engineer',
-        period: '2022 -- Present',
-        location: 'Toronto, ON (Remote)',
+        period: '2024 -- Present',
+        location: 'Toronto, ON',
         bullets: [
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.',
-          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.',
+          'Work on the Inventory team within Shopify\'s core platform, building foundational infrastructure that powers merchants across the globe.',
+          'Champion the technical direction of high-impact projects that expand Shopify\'s platform offering, driving GMV growth and merchant acquisition by solving real merchant business needs.',
+          'Mentor junior developers and help establish best practices and patterns across the team.',
         ],
       },
     ],
@@ -100,20 +99,21 @@ export const experience: ExperienceEntry[] = [
         period: '2020 -- 2024',
         location: 'Toronto, ON',
         bullets: [
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.',
-          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          'One of the fastest-growing consultants in the firm, progressing from Associate to Managing Consultant within 4 years.',
+          'Drove technical project delivery across a diverse portfolio of clients spanning major Canadian airlines, multiple major Canadian banks, and non-profits.',
+          'Led high-profile, high-visibility engagements under significant executive scrutiny, consistently delivering on IBM\'s most complex mandates.',
+          'Helped diversify and grow IBM\'s book of business across key accounts, expanding engagements into new workstreams and disciplines.',
+          'Mentored incoming developers across the consulting practice, establishing technical standards and onboarding best practices.',
         ],
-        
       },
       {
         title: 'Extreme Blue Technical Intern',
         period: '2019',
         location: 'Markham, ON',
         bullets: [
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.',
-          'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-          'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          'Developed a moonshot machine learning product over 4 months, leveraging neural networks to classify dangerous incoming server connections for IBM\'s Guardium security platform.',
+          'Helped build the business case for the product and pitched it to a suite of IBM executives in New York City, receiving high praise.',
+          'A version of the project is now offered as part of IBM\'s security product portfolio.',
         ],
       },
     ],
