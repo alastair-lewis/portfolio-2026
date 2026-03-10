@@ -53,6 +53,7 @@ export const projects: Project[] = [
 export const experience: ExperienceEntry[] = [
   {
     company: 'Shopify',
+    logoFile: 'shopify.svg',
     url: 'https://shopify.com',
     roles: [
       {
@@ -70,6 +71,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: 'IBM',
+    logoFile: 'ibm.svg',
     url: 'https://ibm.com',
     roles: [
       {
