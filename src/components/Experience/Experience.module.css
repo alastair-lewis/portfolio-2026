@@ -44,11 +44,19 @@
   box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2), 0 0 12px rgba(78, 205, 196, 0.3);
 }
 
-.companyName {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
+.companyHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   margin-bottom: var(--space-5);
+}
+
+.companyLogo {
+  height: 28px;
+  max-height: 28px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .companyLink {
