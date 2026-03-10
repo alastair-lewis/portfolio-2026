@@ -41,6 +41,14 @@
 .accent2 { background: linear-gradient(135deg, var(--teal) 0%, var(--coral) 100%); }
 .accent3 { background: linear-gradient(135deg, var(--orange) 0%, var(--teal) 100%); }
 
+.logo {
+  height: 40px;
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 700;
@@ -48,7 +56,7 @@
   margin-bottom: var(--space-1);
 }
 
-.stackLabel {
+.role {
   font-size: 0.75rem;
   color: var(--text-tertiary);
   font-family: var(--font-mono);
@@ -59,6 +67,20 @@
   color: var(--text-secondary);
   line-height: 1.65;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.redacted {
+  flex: 1;
+}
+
+.redacted .desc {
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+  flex: unset;
 }
 
 .tags {
@@ -70,4 +92,13 @@
 .cardFooter {
   padding-top: var(--space-2);
   border-top: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.urlNote {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
 }
