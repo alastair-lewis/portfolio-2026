@@ -4,15 +4,22 @@
 // ============================================================
 
 import type {EducationEntry, ExperienceEntry, Project} from './types';
+import {generateGenesisUrl} from '../utils/generateGenesisUrl';
+
+const sixMonthsFromNow = new Date();
+sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
 
 export const projects: Project[] = [
   {
     id: 'quickTransfers',
     title: 'Quick Transfers',
-    description:
+    logoFile: 'shopify_square.svg',
+    description: [
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.',
+    ],
     accentVariant: 3,
-    stackLabel: 'React / TypeScript / GraphQL / Rails',
+    role: 'Project Champion & Senior Engineer',
+    comingSoon: true,
     tags: [
       {label: 'React', variant: 'coral'},
       {label: 'TypeScript', variant: 'teal'},
@@ -23,10 +30,19 @@ export const projects: Project[] = [
   {
     id: 'genesis',
     title: 'Genesis',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.',
+    logoFile: 'air_canada_square.svg',
+    url: generateGenesisUrl({
+      origin: 'YYZ',
+      destination: 'YVR',
+      departureDate: sixMonthsFromNow,
+    }),
+    description: [
+      "Led the frontend team on Air Canada's next-generation booking engine, built by IBM on AWS.",
+      "Now serving customers worldwide and accounting for Air Canada's primary revenue stream, Genesis delivers a rebuilt frontend for performance and accessibility, backed by a modular GraphQL API layer.",
+      'The first Air Canada project to introduce Generative AI into the SDLC.',
+    ],
     accentVariant: 1,
-    stackLabel: 'Angular / TypeScript / GraphQL / Redux',
+    role: 'Forward Deployed Lead Engineer',
     tags: [
       {label: 'Angular', variant: 'coral'},
       {label: 'TypeScript', variant: 'teal'},
@@ -37,10 +53,15 @@ export const projects: Project[] = [
   {
     id: 'aeroplanDashboard',
     title: 'Aeroplan Dashboard',
-    description:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.',
+    logoFile: 'air_canada_square.svg',
+    url: 'https://www.aircanada.com/aeroplan/member/dashboard',
+    urlNote: 'Login required',
+    description: [
+      "Delivered key functionality on Air Canada's Aeroplan loyalty dashboard.",
+      'Contributed as the program grew from 4 million to 8.5 million members, establishing Aeroplan as one of the top 10 airline loyalty programs in the world.',
+    ],
     accentVariant: 2,
-    stackLabel: 'Angular / TypeScript / REST / Redux',
+    role: 'Forward Deployed Senior Engineer',
     tags: [
       {label: 'Angular', variant: 'coral'},
       {label: 'TypeScript', variant: 'teal'},
