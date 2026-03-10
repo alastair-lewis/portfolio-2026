@@ -124,11 +124,11 @@ export const education: EducationEntry[] = [
   {
     institution: "Queen's University",
     degree: 'B.Sc. (Hons.) Computing -- Software Design',
-    years: '2012 -- 2016',
+    years: '2016 -- 2020',
   },
   {
     institution: 'Crescent School',
     degree: 'Ontario Secondary School Diploma',
-    years: '2008 -- 2012',
+    years: '2008 -- 2016',
   },
 ];
