@@ -1,6 +1,6 @@
 # Portfolio 2026
 
-Hey! I'm **Alastair Lewis**, a Senior Software Engineer at Shopify based in Toronto. This is my personal portfolio site, a place to show off the projects I've worked on, my experience, and a bit about who I am.
+Hey! I'm **Alastair Lewis**, a Software Enginner based in Toronto. This is my personal portfolio site, a place to show off the projects I've worked on, my experience, and a bit about who I am.
 
 ## What's Inside
 
