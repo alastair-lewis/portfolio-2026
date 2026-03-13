@@ -28,8 +28,8 @@ describe('Education', () => {
 
   it('renders years for each entry', () => {
     render(<Education />);
-    expect(screen.getByText('2012 -- 2016')).toBeInTheDocument();
-    expect(screen.getByText('2008 -- 2012')).toBeInTheDocument();
+    expect(screen.getByText('2016 -- 2020')).toBeInTheDocument();
+    expect(screen.getByText('2008 -- 2016')).toBeInTheDocument();
   });
 
   it('renders the section inside an id=education element', () => {
