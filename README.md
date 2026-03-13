@@ -2,6 +2,9 @@
 
 Hey! I'm **Alastair Lewis**, a Software Enginner based in Toronto. This is my personal portfolio site, a place to show off the projects I've worked on, my experience, and a bit about who I am.
 
+## Public URL
+The project is currently deployed on a Github page [here](https://alastair-lewis.github.io/portfolio-2026), and will be moved onto my personal domain in the near future.
+
 ## What's Inside
 
 The site is a single-page portfolio with the following sections:
