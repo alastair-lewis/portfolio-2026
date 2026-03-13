@@ -18,7 +18,7 @@ describe('About', () => {
 
   it('renders stack technologies', () => {
     render(<About />);
-    expect(screen.getByText(/React, TypeScript/)).toBeInTheDocument();
+    expect(screen.getByText(/React, Angular, TypeScript/)).toBeInTheDocument();
   });
 
   it('renders the section inside an id=about element', () => {
