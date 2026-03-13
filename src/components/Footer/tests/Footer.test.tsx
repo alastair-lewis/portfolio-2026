@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {Footer} from '../Footer';
 
@@ -17,7 +17,9 @@ describe('Footer', () => {
 
   it('renders the built-with text', () => {
     render(<Footer />);
-    expect(screen.getByText(/Built with React and TypeScript/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Built with React and TypeScript/i),
+    ).toBeInTheDocument();
   });
 
   it('renders a contentinfo landmark', () => {

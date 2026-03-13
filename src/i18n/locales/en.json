@@ -17,7 +17,8 @@
   "projects": {
     "label": "Concept Projects",
     "title": "Things I've Built",
-    "cta": "View project"
+    "cta": "View project",
+    "in_progress": "In progress"
   },
   "experience": {
     "label": "Work History",
@@ -50,38 +51,50 @@
     "built_with": "Built with React and TypeScript"
   },
   "projects_data": {
-    "quantumflow_title": "QuantumFlow",
-    "quantumflow_desc": "A real-time collaborative data-pipeline editor with drag-and-drop node composition, live execution preview, and shareable pipeline URLs.",
-    "meridian_title": "Meridian",
-    "meridian_desc": "A design-system component library with zero runtime CSS-in-JS, full keyboard navigation, WCAG 2.2 AA compliance, and auto-generated Storybook docs.",
-    "cascade_title": "Cascade",
-    "cascade_desc": "A developer productivity CLI that analyses pull-request diff size, flags review complexity, and suggests optimal reviewer pairings using a graph-based model."
+    "quickTransfers": {
+      "title": "Quick Transfers",
+      "role": "Project Champion & Senior Engineer",
+      "desc_0": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident."
+    },
+    "genesis": {
+      "title": "Genesis",
+      "role": "Forward Deployed Lead Engineer",
+      "desc_0": "Led the frontend team on Air Canada's next-generation booking engine, built by IBM on AWS.",
+      "desc_1": "Now serving customers worldwide and accounting for Air Canada's primary revenue stream, Genesis delivers a rebuilt frontend for performance and accessibility, backed by a modular GraphQL API layer.",
+      "desc_2": "The first Air Canada project to introduce Generative AI into the SDLC."
+    },
+    "aeroplanDashboard": {
+      "title": "Aeroplan Dashboard",
+      "role": "Forward Deployed Senior Engineer",
+      "desc_0": "Delivered key functionality on Air Canada's Aeroplan loyalty dashboard.",
+      "desc_1": "Contributed as the program grew from 4 million to 8.5 million members, establishing Aeroplan as one of the top 10 airline loyalty programs in the world.",
+      "url_note": "Login required"
+    }
   },
   "experience_data": {
-    "shopify_role1_title": "Senior Software Engineer",
-    "shopify_role1_bullets": [
-      "Led frontend architecture for Shopify's admin design system, adopting CSS Modules and Polaris tokens across 40+ components.",
-      "Partnered with accessibility team to achieve WCAG 2.2 AA compliance across critical checkout flows, measured via axe-core CI gates.",
-      "Mentored three junior engineers through structured pairing, code reviews, and quarterly growth planning.",
-      "Drove adoption of a component ownership model that reduced cross-team regression incidents by ~30%."
-    ],
-    "shopify_role2_title": "Software Engineer II",
-    "shopify_role2_bullets": [
-      "Built and maintained React components serving Shopify's merchant-facing analytics dashboard, handling 50M+ monthly active merchants.",
-      "Migrated legacy class components to hooks-based architecture, cutting bundle size by 18% and improving test coverage to 85%.",
-      "Collaborated with product and design on a redesigned order management interface that reduced merchant task completion time by 22%."
-    ],
-    "ibm_role1_title": "Software Developer",
-    "ibm_role1_bullets": [
-      "Developed full-stack features for IBM OpenPages, an enterprise GRC platform, using React, Java, and DB2.",
-      "Redesigned the user-permissions module UI, reducing configuration time from 12 steps to 4.",
-      "Integrated REST APIs with third-party compliance data providers, automating previously manual regulatory reporting workflows."
-    ],
-    "ibm_role2_title": "Associate Software Developer",
-    "ibm_role2_bullets": [
-      "Built internal data-visualisation dashboards using D3.js and React for the IBM Watson Health division.",
-      "Participated in an agile team of 8, contributing to two-week sprint cycles and bi-weekly stakeholder demos.",
-      "Achieved IBM Cloud Professional Developer certification."
-    ]
+    "shopify": {
+      "role0": {
+        "title": "Senior Software Engineer",
+        "bullet_0": "Work on the Inventory team within Shopify's core platform, building foundational infrastructure that powers merchants across the globe.",
+        "bullet_1": "Champion the technical direction of high-impact projects that expand Shopify's platform offering, driving GMV growth and merchant acquisition by solving real merchant business needs.",
+        "bullet_2": "Mentor junior developers and help establish best practices and patterns across the team."
+      }
+    },
+    "ibm": {
+      "role0": {
+        "title": "Managing Technical Consultant",
+        "bullet_0": "One of the fastest-growing consultants in the firm, progressing from Associate to Managing Consultant within 4 years.",
+        "bullet_1": "Drove technical project delivery across a diverse portfolio of clients spanning major Canadian airlines, multiple major Canadian banks, and non-profits.",
+        "bullet_2": "Led high-profile, high-visibility engagements under significant executive scrutiny, consistently delivering on IBM's most complex mandates.",
+        "bullet_3": "Helped diversify and grow IBM's book of business across key accounts, expanding engagements into new workstreams and disciplines.",
+        "bullet_4": "Mentored incoming developers across the consulting practice, establishing technical standards and onboarding best practices."
+      },
+      "role1": {
+        "title": "Extreme Blue Technical Intern",
+        "bullet_0": "Developed a moonshot machine learning product over 4 months, leveraging neural networks to classify dangerous incoming server connections for IBM's Guardium security platform.",
+        "bullet_1": "Helped build the business case for the product and pitched it to a suite of IBM executives in New York City, receiving high praise.",
+        "bullet_2": "A version of the project is now offered as part of IBM's security product portfolio."
+      }
+    }
   }
 }

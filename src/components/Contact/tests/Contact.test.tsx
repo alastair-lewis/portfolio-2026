@@ -1,20 +1,21 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {Contact} from '../Contact';
 
 describe('Contact', () => {
   it('renders the section heading', () => {
     render(<Contact />);
-    expect(screen.getByRole('heading', {level: 2, name: 'Contact'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'Contact'}),
+    ).toBeInTheDocument();
   });
 
   it('renders the email CTA link', () => {
     render(<Contact />);
-    expect(screen.getByRole('link', {name: /send me an email/i})).toHaveAttribute(
-      'href',
-      'mailto:alastair.lewis10@gmail.com',
-    );
+    expect(
+      screen.getByRole('link', {name: /send me an email/i}),
+    ).toHaveAttribute('href', 'mailto:alastair.lewis10@gmail.com');
   });
 
   it('renders the GitHub link', () => {

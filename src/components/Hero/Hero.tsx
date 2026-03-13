@@ -1,25 +1,27 @@
+import {useTranslation} from 'react-i18next';
+
 import {Button} from '../ui/Button/Button';
 import styles from './Hero.module.css';
 
 export function Hero() {
+  const {t} = useTranslation();
+
   return (
     <section className={styles.section} aria-labelledby="hero-heading">
       <div className={styles.inner}>
         <h1 id="hero-heading" className={styles.name}>
-          Alastair Lewis
+          {t('hero.name')}
         </h1>
 
-        <p className={styles.role}>Senior Software Engineer</p>
-        <p className={styles.tagline}>
-          Frontend architecture, accessibility, and building things that scale.
-        </p>
+        <p className={styles.role}>{t('hero.role')}</p>
+        <p className={styles.tagline}>{t('hero.tagline')}</p>
 
         <div className={styles.ctas}>
           <Button variant="primary" href="#projects">
-            See my work
+            {t('hero.cta_work')}
           </Button>
           <Button variant="secondary" href="#contact">
-            Get in touch
+            {t('hero.cta_contact')}
           </Button>
         </div>
       </div>

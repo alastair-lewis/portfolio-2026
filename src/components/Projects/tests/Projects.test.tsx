@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {Projects} from '../Projects';
 import {projects} from '../../../data/portfolio';
@@ -39,7 +39,9 @@ describe('Projects', () => {
     render(<Projects />);
     const imgs = Array.from(document.querySelectorAll('img'));
     for (const project of projects.filter((p) => p.logoFile)) {
-      const img = imgs.find((el) => el.getAttribute('src')?.includes(project.logoFile));
+      const img = imgs.find((el) =>
+        el.getAttribute('src')?.includes(project.logoFile),
+      );
       expect(img).toBeInTheDocument();
     }
   });

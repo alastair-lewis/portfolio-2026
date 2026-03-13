@@ -1,3 +1,5 @@
+import {useTranslation} from 'react-i18next';
+
 import {projects} from '../../data/portfolio';
 import {classNames} from '../../utils/classNames';
 import {Button} from '../ui/Button/Button';
@@ -14,10 +16,20 @@ const ACCENT_CLASS: Record<1 | 2 | 3, string> = {
 };
 
 export function Projects() {
+  const {t} = useTranslation();
+
   return (
-    <section id="projects" className={styles.section} aria-labelledby="projects-heading">
+    <section
+      id="projects"
+      className={styles.section}
+      aria-labelledby="projects-heading"
+    >
       <div className={styles.inner}>
-        <SectionHeader label="Concept Projects" title="Things I've Built" id="projects-heading" />
+        <SectionHeader
+          label={t('projects.label')}
+          title={t('projects.title')}
+          id="projects-heading"
+        />
 
         <ul className={styles.grid} role="list">
           {projects.map((project) => (
@@ -25,8 +37,12 @@ export function Projects() {
               <GlassCard className={styles.card} as="article">
                 <div className={styles.cardTop}>
                   <div>
-                    <h3 className={styles.cardTitle}>{project.title}</h3>
-                    <p className={styles.role}>{project.role}</p>
+                    <h3 className={styles.cardTitle}>
+                      {t(`projects_data.${project.id}.title`)}
+                    </h3>
+                    <p className={styles.role}>
+                      {t(`projects_data.${project.id}.role`)}
+                    </p>
                   </div>
                   {project.logoFile ? (
                     <img
@@ -37,41 +53,57 @@ export function Projects() {
                     />
                   ) : (
                     <div
-                      className={classNames(styles.accent, ACCENT_CLASS[project.accentVariant])}
+                      className={classNames(
+                        styles.accent,
+                        ACCENT_CLASS[project.accentVariant],
+                      )}
                       aria-hidden="true"
                     />
                   )}
                 </div>
 
                 {project.comingSoon ? (
-                  <Tooltip label="In progress" className={styles.redacted}>
+                  <Tooltip
+                    label={t('projects.in_progress')}
+                    className={styles.redacted}
+                  >
                     <div className={styles.desc} aria-hidden="true">
-                      {project.description.map((para, i) => (
-                        <p key={i}>{para}</p>
+                      {project.description.map((_para, i) => (
+                        <p key={i}>
+                          {t(`projects_data.${project.id}.desc_${i}`)}
+                        </p>
                       ))}
                     </div>
                   </Tooltip>
                 ) : (
                   <div className={styles.desc}>
-                    {project.description.map((para, i) => (
-                      <p key={i}>{para}</p>
+                    {project.description.map((_para, i) => (
+                      <p key={i}>
+                        {t(`projects_data.${project.id}.desc_${i}`)}
+                      </p>
                     ))}
                   </div>
                 )}
 
                 <div className={styles.tags}>
                   {project.tags.map((tag) => (
-                    <Tag key={tag.label} label={tag.label} variant={tag.variant} />
+                    <Tag
+                      key={tag.label}
+                      label={tag.label}
+                      variant={tag.variant}
+                    />
                   ))}
                 </div>
 
                 {project.url && (
                   <div className={styles.cardFooter}>
                     <Button variant="secondary" href={project.url}>
-                      View project
+                      {t('projects.cta')}
                     </Button>
                     {project.urlNote && (
-                      <span className={styles.urlNote}>{project.urlNote}</span>
+                      <span className={styles.urlNote}>
+                        {t(`projects_data.${project.id}.url_note`)}
+                      </span>
                     )}
                   </div>
                 )}
