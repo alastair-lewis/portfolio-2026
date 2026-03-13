@@ -20,7 +20,7 @@
   content: '';
   position: absolute;
   left: 7px;
-  top: 8px;
+  top: 18px;
   bottom: 8px;
   width: 2px;
   background: var(--timeline-grad);
