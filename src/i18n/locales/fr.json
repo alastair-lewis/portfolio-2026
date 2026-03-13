@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "projects": "Projets",
+    "experience": "Expérience",
+    "education": "Formation",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Ouvert aux conversations",
+    "name": "Alastair Lewis",
+    "role": "Ingénieur logiciel senior chez Shopify",
+    "tagline": "Architecture frontend, accessibilité et développement de systèmes à grande échelle.",
+    "cta_work": "Voir mes projets",
+    "cta_contact": "Me contacter"
+  },
+  "projects": {
+    "label": "Projets personnels",
+    "title": "Ce que j'ai construit",
+    "cta": "Voir le projet"
+  },
+  "experience": {
+    "label": "Parcours professionnel",
+    "title": "Où j'ai travaillé"
+  },
+  "education": {
+    "label": "Parcours académique",
+    "title": "Formation",
+    "queens_degree": "B.Sc. (spéc.) Informatique -- Génie logiciel",
+    "crescent_degree": "Diplôme d'études secondaires de l'Ontario"
+  },
+  "about": {
+    "label": "Contexte",
+    "title": "À propos de moi",
+    "p1": "Ingénieur logiciel senior chez Shopify. Je construis l'architecture frontend et les systèmes de design, le genre de travail où une bonne abstraction peut faire gagner une heure à mille ingénieurs. Des interfaces soignées à grande échelle. C'est ça qui me motive.",
+    "p2": "J'ai fait mes débuts chez IBM, où j'ai livré des projets dans l'aérien, la finance, le secteur associatif, et un projet de sécurité expérimental via Extreme Blue. Beaucoup de domaines, une seule leçon : le bon frontend, c'est autant du métier que de la pensée systémique.",
+    "p3": "Basé à Toronto. Golfeur, skieur, aspirant DJ house. J'aime travailler à distance aux quatre coins du monde, idéalement à portée d'un premier départ et d'un flat white.",
+    "stack_label": "Stack actuel",
+    "stack": "React, Angular, TypeScript, GraphQL, Node.js, Ruby on Rails, Python, Java, C/C++"
+  },
+  "contact": {
+    "label": "Me contacter",
+    "title": "Contact",
+    "email_cta": "M'envoyer un courriel",
+    "github_cta": "GitHub",
+    "linkedin_cta": "LinkedIn"
+  },
+  "footer": {
+    "copy": "Alastair Lewis",
+    "built_with": "Construit avec React et TypeScript"
+  },
+  "projects_data": {
+    "quantumflow_title": "QuantumFlow",
+    "quantumflow_desc": "Un éditeur collaboratif de pipelines de données en temps réel avec composition de noeuds par glisser-déposer, aperçu d'exécution en direct et URLs de partage.",
+    "meridian_title": "Meridian",
+    "meridian_desc": "Une bibliothèque de composants de système de design sans CSS-in-JS à l'exécution, navigation complète au clavier, conformité WCAG 2.2 AA et documentation Storybook générée automatiquement.",
+    "cascade_title": "Cascade",
+    "cascade_desc": "Un CLI de productivité développeur qui analyse la taille des diff de pull requests, signale la complexité de révision et suggère des pairages de réviseurs optimaux via un modèle basé sur les graphes."
+  },
+  "experience_data": {
+    "shopify_role1_title": "Ingénieur logiciel senior",
+    "shopify_role1_bullets": [
+      "Direction de l'architecture frontend du système de design admin de Shopify, avec adoption de CSS Modules et des tokens Polaris sur 40+ composants.",
+      "Collaboration avec l'équipe d'accessibilité pour atteindre la conformité WCAG 2.2 AA sur les flux de paiement critiques, mesurée via des contrôles CI axe-core.",
+      "Mentorat de trois ingénieurs juniors via du jumelage structuré, des révisions de code et une planification de croissance trimestrielle.",
+      "Promotion d'un modèle de propriété des composants ayant réduit les incidents de régression inter-équipes d'environ 30%."
+    ],
+    "shopify_role2_title": "Ingénieur logiciel II",
+    "shopify_role2_bullets": [
+      "Développement et maintenance de composants React pour le tableau de bord analytique de Shopify, desservant 50M+ marchands actifs mensuels.",
+      "Migration des composants de classe legacy vers une architecture basée sur les hooks, réduisant la taille du bundle de 18% et améliorant la couverture de tests à 85%.",
+      "Collaboration avec produit et design sur une interface de gestion des commandes redessinée réduisant le temps de complétion des tâches marchands de 22%."
+    ],
+    "ibm_role1_title": "Développeur logiciel",
+    "ibm_role1_bullets": [
+      "Développement de fonctionnalités full-stack pour IBM OpenPages, une plateforme GRC d'entreprise, avec React, Java et DB2.",
+      "Refonte de l'interface du module de permissions utilisateur, réduisant le temps de configuration de 12 étapes à 4.",
+      "Intégration d'APIs REST avec des fournisseurs tiers de données de conformité, automatisant des flux de rapports réglementaires précédemment manuels."
+    ],
+    "ibm_role2_title": "Développeur logiciel associé",
+    "ibm_role2_bullets": [
+      "Développement de tableaux de bord de visualisation de données internes avec D3.js et React pour la division IBM Watson Health.",
+      "Participation dans une équipe agile de 8 personnes, contribuant à des sprints de deux semaines et des démos bi-hebdomadaires.",
+      "Obtention de la certification IBM Cloud Professional Developer."
+    ]
+  }
+}

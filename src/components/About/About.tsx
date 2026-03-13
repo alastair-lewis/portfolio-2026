@@ -11,26 +11,25 @@ export function About() {
         <GlassCard className={styles.card}>
           <div className={styles.prose}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Senior Software Engineer at Shopify. I build frontend architecture and design systems,
+              the kind of work where a clean abstraction can save a thousand engineers an hour each.
+              Polished UIs at serious scale. That's the stuff.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              Got my start at IBM, where I shipped across airlines, banking, nonprofits, and a
+              moonshot security project through Extreme Blue. Lots of domains, one takeaway: great
+              frontend is equal parts craft and systems thinking.
             </p>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-              laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi
-              architecto beatae vitae dicta sunt explicabo.
+              Toronto-based. Golfer, skier, wannabe house DJ. I like to work remotely around the
+              world, ideally within range of a first tee and a flat white.
             </p>
           </div>
 
           <aside className={styles.stackBox} aria-label="Current technology stack">
             <p className={styles.stackLabel}>Current stack</p>
             <p className={styles.stackText}>
-              React, TypeScript, GraphQL, CSS Modules, Vite, Node.js, Ruby on Rails
+              React, Angular, TypeScript, GraphQL, Node.js, Ruby on Rails, Python, Java, C/C++
             </p>
           </aside>
         </GlassCard>
