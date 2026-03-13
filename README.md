@@ -73,7 +73,7 @@ The entire site is available in English and French. Click the language toggle in
 
 ## Claude Code
 
-This project includes a `.claude/` directory with project configuration for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). It defines coding conventions, project structure, and a set of custom skills that speed up common workflows:
+This project includes a `.claude/` directory with project configuration for Claude Code. It defines coding conventions, project structure, and a set of custom skills that speed up common workflows:
 
 | Skill              | What it does                                                  |
 | ------------------ | ------------------------------------------------------------- |
