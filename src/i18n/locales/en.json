@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Open to conversations",
+    "name": "Alastair Lewis",
+    "role": "Senior Software Engineer at Shopify",
+    "tagline": "Frontend architecture, accessibility, and building things that scale.",
+    "cta_work": "See my work",
+    "cta_contact": "Get in touch"
+  },
+  "projects": {
+    "label": "Concept Projects",
+    "title": "Things I've Built",
+    "cta": "View project"
+  },
+  "experience": {
+    "label": "Work History",
+    "title": "Where I've Worked"
+  },
+  "education": {
+    "label": "Academic Background",
+    "title": "Education",
+    "queens_degree": "B.Sc. (Hons.) Computing — Software Design",
+    "crescent_degree": "Ontario Secondary School Diploma"
+  },
+  "about": {
+    "label": "Background",
+    "title": "About Me",
+    "p1": "Senior Software Engineer at Shopify. I build frontend architecture and design systems, the kind of work where a clean abstraction can save a thousand engineers an hour each. Polished UIs at serious scale. That's the stuff.",
+    "p2": "Got my start at IBM, where I shipped across airlines, banking, nonprofits, and a moonshot security project through Extreme Blue. Lots of domains, one takeaway: great frontend is equal parts craft and systems thinking.",
+    "p3": "Toronto-based. Golfer, skier, wannabe house DJ. I like to work remotely around the world, ideally within range of a first tee and a flat white.",
+    "stack_label": "Current stack",
+    "stack": "React, Angular, TypeScript, GraphQL, Node.js, Ruby on Rails, Python, Java, C/C++"
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "title": "Contact",
+    "email_cta": "Send me an email",
+    "github_cta": "GitHub",
+    "linkedin_cta": "LinkedIn"
+  },
+  "footer": {
+    "copy": "Alastair Lewis",
+    "built_with": "Built with React and TypeScript"
+  },
+  "projects_data": {
+    "quantumflow_title": "QuantumFlow",
+    "quantumflow_desc": "A real-time collaborative data-pipeline editor with drag-and-drop node composition, live execution preview, and shareable pipeline URLs.",
+    "meridian_title": "Meridian",
+    "meridian_desc": "A design-system component library with zero runtime CSS-in-JS, full keyboard navigation, WCAG 2.2 AA compliance, and auto-generated Storybook docs.",
+    "cascade_title": "Cascade",
+    "cascade_desc": "A developer productivity CLI that analyses pull-request diff size, flags review complexity, and suggests optimal reviewer pairings using a graph-based model."
+  },
+  "experience_data": {
+    "shopify_role1_title": "Senior Software Engineer",
+    "shopify_role1_bullets": [
+      "Led frontend architecture for Shopify's admin design system, adopting CSS Modules and Polaris tokens across 40+ components.",
+      "Partnered with accessibility team to achieve WCAG 2.2 AA compliance across critical checkout flows, measured via axe-core CI gates.",
+      "Mentored three junior engineers through structured pairing, code reviews, and quarterly growth planning.",
+      "Drove adoption of a component ownership model that reduced cross-team regression incidents by ~30%."
+    ],
+    "shopify_role2_title": "Software Engineer II",
+    "shopify_role2_bullets": [
+      "Built and maintained React components serving Shopify's merchant-facing analytics dashboard, handling 50M+ monthly active merchants.",
+      "Migrated legacy class components to hooks-based architecture, cutting bundle size by 18% and improving test coverage to 85%.",
+      "Collaborated with product and design on a redesigned order management interface that reduced merchant task completion time by 22%."
+    ],
+    "ibm_role1_title": "Software Developer",
+    "ibm_role1_bullets": [
+      "Developed full-stack features for IBM OpenPages, an enterprise GRC platform, using React, Java, and DB2.",
+      "Redesigned the user-permissions module UI, reducing configuration time from 12 steps to 4.",
+      "Integrated REST APIs with third-party compliance data providers, automating previously manual regulatory reporting workflows."
+    ],
+    "ibm_role2_title": "Associate Software Developer",
+    "ibm_role2_bullets": [
+      "Built internal data-visualisation dashboards using D3.js and React for the IBM Watson Health division.",
+      "Participated in an agile team of 8, contributing to two-week sprint cycles and bi-weekly stakeholder demos.",
+      "Achieved IBM Cloud Professional Developer certification."
+    ]
+  }
+}
