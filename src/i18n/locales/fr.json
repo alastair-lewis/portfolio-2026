@@ -17,7 +17,8 @@
   "projects": {
     "label": "Projets personnels",
     "title": "Ce que j'ai construit",
-    "cta": "Voir le projet"
+    "cta": "Voir le projet",
+    "in_progress": "En cours"
   },
   "experience": {
     "label": "Parcours professionnel",
@@ -50,38 +51,50 @@
     "built_with": "Construit avec React et TypeScript"
   },
   "projects_data": {
-    "quantumflow_title": "QuantumFlow",
-    "quantumflow_desc": "Un éditeur collaboratif de pipelines de données en temps réel avec composition de noeuds par glisser-déposer, aperçu d'exécution en direct et URLs de partage.",
-    "meridian_title": "Meridian",
-    "meridian_desc": "Une bibliothèque de composants de système de design sans CSS-in-JS à l'exécution, navigation complète au clavier, conformité WCAG 2.2 AA et documentation Storybook générée automatiquement.",
-    "cascade_title": "Cascade",
-    "cascade_desc": "Un CLI de productivité développeur qui analyse la taille des diff de pull requests, signale la complexité de révision et suggère des pairages de réviseurs optimaux via un modèle basé sur les graphes."
+    "quickTransfers": {
+      "title": "Transferts rapides",
+      "role": "Champion de projet et ingénieur senior",
+      "desc_0": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident."
+    },
+    "genesis": {
+      "title": "Genesis",
+      "role": "Ingénieur principal déployé sur le terrain",
+      "desc_0": "Dirigé l'équipe frontend du moteur de réservation nouvelle génération d'Air Canada, développé par IBM sur AWS.",
+      "desc_1": "Désormais au service de clients dans le monde entier et représentant la principale source de revenus d'Air Canada, Genesis offre un frontend repensé pour la performance et l'accessibilité, soutenu par une couche API GraphQL modulaire.",
+      "desc_2": "Le premier projet d'Air Canada à intégrer l'IA générative dans le cycle de développement logiciel."
+    },
+    "aeroplanDashboard": {
+      "title": "Tableau de bord Aeroplan",
+      "role": "Ingénieur senior déployé sur le terrain",
+      "desc_0": "Livré des fonctionnalités clés sur le tableau de bord de fidélité Aeroplan d'Air Canada.",
+      "desc_1": "Contribué à la croissance du programme de 4 millions à 8,5 millions de membres, établissant Aeroplan comme l'un des 10 meilleurs programmes de fidélité aériens au monde.",
+      "url_note": "Connexion requise"
+    }
   },
   "experience_data": {
-    "shopify_role1_title": "Ingénieur logiciel senior",
-    "shopify_role1_bullets": [
-      "Direction de l'architecture frontend du système de design admin de Shopify, avec adoption de CSS Modules et des tokens Polaris sur 40+ composants.",
-      "Collaboration avec l'équipe d'accessibilité pour atteindre la conformité WCAG 2.2 AA sur les flux de paiement critiques, mesurée via des contrôles CI axe-core.",
-      "Mentorat de trois ingénieurs juniors via du jumelage structuré, des révisions de code et une planification de croissance trimestrielle.",
-      "Promotion d'un modèle de propriété des composants ayant réduit les incidents de régression inter-équipes d'environ 30%."
-    ],
-    "shopify_role2_title": "Ingénieur logiciel II",
-    "shopify_role2_bullets": [
-      "Développement et maintenance de composants React pour le tableau de bord analytique de Shopify, desservant 50M+ marchands actifs mensuels.",
-      "Migration des composants de classe legacy vers une architecture basée sur les hooks, réduisant la taille du bundle de 18% et améliorant la couverture de tests à 85%.",
-      "Collaboration avec produit et design sur une interface de gestion des commandes redessinée réduisant le temps de complétion des tâches marchands de 22%."
-    ],
-    "ibm_role1_title": "Développeur logiciel",
-    "ibm_role1_bullets": [
-      "Développement de fonctionnalités full-stack pour IBM OpenPages, une plateforme GRC d'entreprise, avec React, Java et DB2.",
-      "Refonte de l'interface du module de permissions utilisateur, réduisant le temps de configuration de 12 étapes à 4.",
-      "Intégration d'APIs REST avec des fournisseurs tiers de données de conformité, automatisant des flux de rapports réglementaires précédemment manuels."
-    ],
-    "ibm_role2_title": "Développeur logiciel associé",
-    "ibm_role2_bullets": [
-      "Développement de tableaux de bord de visualisation de données internes avec D3.js et React pour la division IBM Watson Health.",
-      "Participation dans une équipe agile de 8 personnes, contribuant à des sprints de deux semaines et des démos bi-hebdomadaires.",
-      "Obtention de la certification IBM Cloud Professional Developer."
-    ]
+    "shopify": {
+      "role0": {
+        "title": "Ingénieur logiciel senior",
+        "bullet_0": "Travaille au sein de l'équipe Inventaire de la plateforme principale de Shopify, développant l'infrastructure fondamentale qui soutient les marchands à travers le monde.",
+        "bullet_1": "Porte la direction technique de projets à fort impact qui élargissent l'offre de la plateforme Shopify, stimulant la croissance du GMV et l'acquisition de marchands en répondant à leurs besoins commerciaux réels.",
+        "bullet_2": "Encadre les développeurs juniors et contribue à établir les meilleures pratiques et les standards au sein de l'équipe."
+      }
+    },
+    "ibm": {
+      "role0": {
+        "title": "Consultant technique gestionnaire",
+        "bullet_0": "L'un des consultants à la croissance la plus rapide de l'entreprise, passant d'associé à consultant gestionnaire en 4 ans.",
+        "bullet_1": "Piloté la livraison technique de projets pour un portefeuille diversifié de clients couvrant les grandes compagnies aériennes canadiennes, plusieurs grandes banques canadiennes et des organismes à but non lucratif.",
+        "bullet_2": "Dirigé des engagements de haut profil et haute visibilité sous une surveillance exécutive importante, livrant systématiquement les mandats les plus complexes d'IBM.",
+        "bullet_3": "Contribué à diversifier et développer le portefeuille d'affaires d'IBM sur les comptes clés, élargissant les engagements vers de nouveaux flux de travail et disciplines.",
+        "bullet_4": "Encadré les nouveaux développeurs au sein de la pratique de conseil, établissant des standards techniques et des pratiques d'intégration."
+      },
+      "role1": {
+        "title": "Stagiaire technique Extreme Blue",
+        "bullet_0": "Développé un produit d'apprentissage automatique expérimental sur 4 mois, utilisant des réseaux de neurones pour classifier les connexions serveur dangereuses pour la plateforme de sécurité Guardium d'IBM.",
+        "bullet_1": "Contribué à la construction du dossier d'affaires du produit et présenté celui-ci à des dirigeants d'IBM à New York, recevant des éloges.",
+        "bullet_2": "Une version du projet est désormais offerte dans le portefeuille de produits de sécurité d'IBM."
+      }
+    }
   }
 }

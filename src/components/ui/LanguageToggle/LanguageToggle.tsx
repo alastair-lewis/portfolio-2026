@@ -1,28 +1,33 @@
+import {useTranslation} from 'react-i18next';
+
 import {classNames} from '../../../utils/classNames';
 import styles from './LanguageToggle.module.css';
 
-// i18n wiring will be added in a later pass
 const LANGUAGES = [
   {code: 'en', label: 'EN'},
   {code: 'fr', label: 'FR'},
 ] as const;
 
-type LangCode = (typeof LANGUAGES)[number]['code'];
+export function LanguageToggle() {
+  const {i18n} = useTranslation();
+  const current = i18n.language?.startsWith('fr') ? 'fr' : 'en';
 
-interface LanguageToggleProps {
-  current?: LangCode;
-  onChange?: (lang: LangCode) => void;
-}
-
-export function LanguageToggle({current = 'en', onChange}: LanguageToggleProps) {
   return (
-    <div className={styles.toggle} role="group" aria-label="Language selection">
+    <div
+      className={styles.toggle}
+      role="group"
+      aria-label="Language selection"
+      data-active={current === 'fr' ? 'fr' : 'en'}
+    >
       {LANGUAGES.map(({code, label}) => (
         <button
           key={code}
           type="button"
-          className={classNames(styles.option, current === code && styles.active)}
-          onClick={() => onChange?.(code)}
+          className={classNames(
+            styles.option,
+            current === code && styles.active,
+          )}
+          onClick={() => i18n.changeLanguage(code)}
           aria-pressed={current === code}
           lang={code}
         >

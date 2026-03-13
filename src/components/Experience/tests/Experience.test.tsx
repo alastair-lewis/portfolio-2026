@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {Experience} from '../Experience';
 import {experience} from '../../../data/portfolio';
@@ -13,7 +13,9 @@ describe('Experience', () => {
   it('renders a logo link for every company with a logoFile and url', () => {
     render(<Experience />);
     for (const entry of experience.filter((e) => e.logoFile && e.url)) {
-      expect(screen.getByRole('link', {name: entry.company})).toBeInTheDocument();
+      expect(
+        screen.getByRole('link', {name: entry.company}),
+      ).toBeInTheDocument();
     }
   });
 
@@ -50,7 +52,10 @@ describe('Experience', () => {
     for (const entry of experience.filter((e) => e.logoFile && e.url)) {
       const link = screen.getByRole('link', {name: entry.company});
       const img = link.querySelector('img');
-      expect(img).toHaveAttribute('src', expect.stringContaining(entry.logoFile!));
+      expect(img).toHaveAttribute(
+        'src',
+        expect.stringContaining(entry.logoFile!),
+      );
     }
   });
 

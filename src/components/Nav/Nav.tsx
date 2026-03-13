@@ -1,15 +1,19 @@
+import {useTranslation} from 'react-i18next';
+
 import {LanguageToggle} from '../ui/LanguageToggle/LanguageToggle';
 import styles from './Nav.module.css';
 
-const NAV_ITEMS = [
-  {label: 'Projects', href: '#projects'},
-  {label: 'Experience', href: '#experience'},
-  {label: 'Education', href: '#education'},
-  {label: 'About', href: '#about'},
-  {label: 'Contact', href: '#contact'},
+const NAV_KEYS = [
+  {key: 'nav.projects', href: '#projects'},
+  {key: 'nav.experience', href: '#experience'},
+  {key: 'nav.education', href: '#education'},
+  {key: 'nav.about', href: '#about'},
+  {key: 'nav.contact', href: '#contact'},
 ] as const;
 
 export function Nav() {
+  const {t} = useTranslation();
+
   return (
     <nav className={styles.nav} aria-label="Main navigation">
       <div className={styles.inner}>
@@ -18,10 +22,10 @@ export function Nav() {
         </a>
 
         <ul className={styles.links} role="list">
-          {NAV_ITEMS.map(({label, href}) => (
+          {NAV_KEYS.map(({key, href}) => (
             <li key={href}>
               <a href={href} className={styles.link}>
-                {label}
+                {t(key)}
               </a>
             </li>
           ))}

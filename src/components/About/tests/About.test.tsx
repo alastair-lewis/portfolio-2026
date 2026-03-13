@@ -1,12 +1,14 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {About} from '../About';
 
 describe('About', () => {
   it('renders the section heading', () => {
     render(<About />);
-    expect(screen.getByRole('heading', {level: 2, name: 'About Me'})).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {level: 2, name: 'About Me'}),
+    ).toBeInTheDocument();
   });
 
   it('renders the stack aside with accessible label', () => {

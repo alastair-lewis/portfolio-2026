@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from '../../../tests/i18n-test-utils';
 
 import {Education} from '../Education';
 import {education} from '../../../data/portfolio';

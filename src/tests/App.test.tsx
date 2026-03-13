@@ -1,5 +1,5 @@
 import {describe, it, expect} from 'vitest';
-import {render, screen} from '@testing-library/react';
+import {render, screen} from './i18n-test-utils';
 
 import {App} from '../App';
 
@@ -26,7 +26,13 @@ describe('App', () => {
 
   it('renders all section ids for anchor navigation', () => {
     render(<App />);
-    for (const id of ['projects', 'experience', 'education', 'about', 'contact']) {
+    for (const id of [
+      'projects',
+      'experience',
+      'education',
+      'about',
+      'contact',
+    ]) {
       expect(document.getElementById(id)).toBeInTheDocument();
     }
   });
