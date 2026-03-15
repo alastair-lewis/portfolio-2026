@@ -26,6 +26,7 @@ The site is a single-page portfolio with the following sections:
 | Testing       | Vitest + React Testing Library + jest-dom  |
 | Linting       | ESLint (flat config) + Prettier            |
 | Package Mgr   | pnpm                                       |
+| Analytics     | Posthog                                    |
 
 ## Getting Started
 
