@@ -13,6 +13,12 @@
     "format:check": "pnpm --filter @portfolio/client format:check",
     "test": "pnpm --filter @portfolio/client test",
     "test:watch": "pnpm --filter @portfolio/client test:watch",
-    "test:coverage": "pnpm --filter @portfolio/client test:coverage"
+    "test:coverage": "pnpm --filter @portfolio/client test:coverage",
+    "dev:server": "pnpm --filter v1 dev",
+    "test:server": "pnpm --filter v1 test",
+    "deploy:server": "pnpm --filter v1 run deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.73.0"
   }
 }
