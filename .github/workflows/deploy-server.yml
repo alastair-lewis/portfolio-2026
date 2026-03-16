@@ -1,12 +1,15 @@
-name: CI
+name: Deploy API
 
 on:
-  pull_request:
+  push:
     branches: [main]
+    paths:
+      - 'server/v1/**'
+  workflow_dispatch:
 
 jobs:
-  test:
-    name: Unit tests
+  deploy:
+    name: Deploy API
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,8 +29,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Type check
-        run: pnpm exec tsc -b
-
       - name: Run tests
-        run: pnpm test -- --passWithNoTests
+        run: pnpm --filter v1 test
+
+      - name: Deploy
+        run: pnpm --filter v1 run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

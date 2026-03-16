@@ -1,8 +1,10 @@
-name: Deploy to GitHub Pages
+name: Deploy Client
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'client/**'
   workflow_dispatch:
 
 permissions:
@@ -38,7 +40,7 @@ jobs:
 
       - name: Build
         run: pnpm build
-        env: 
+        env:
           VITE_PUBLIC_POSTHOG_KEY: ${{ secrets.VITE_PUBLIC_POSTHOG_KEY }}
           VITE_PUBLIC_POSTHOG_HOST: ${{ secrets.VITE_PUBLIC_POSTHOG_HOST }}
 

@@ -1,0 +1,18 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "portfolio-v1",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-03-12",
+	"observability": {
+		"enabled": true
+	},
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"routes": [
+    {
+      "pattern": "api.alastairlewis.com/v1/*",
+      "zone_name": "alastairlewis.com"
+    }
+  ]
+}
