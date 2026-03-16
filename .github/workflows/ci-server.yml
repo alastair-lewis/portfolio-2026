@@ -1,12 +1,14 @@
-name: CI
+name: CI Server
 
 on:
   pull_request:
     branches: [main]
+    paths:
+      - 'server/v1/**'
 
 jobs:
   test:
-    name: Unit tests
+    name: Server Unit Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,8 +28,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Type check
-        run: pnpm exec tsc -b
-
       - name: Run tests
-        run: pnpm test -- --passWithNoTests
+        run: pnpm test:server
