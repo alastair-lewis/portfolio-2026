@@ -6,12 +6,12 @@ export const contactSchema = z.object({
     .trim()
     .min(1, { error: 'Name is required' }),
   email: z
-    .string({ error: 'A valid email is required' })
     .email({ error: 'A valid email is required' }),
   message: z
     .string({ error: 'Message is required' })
     .trim()
     .min(1, { error: 'Message is required' }),
+  company: z.string().optional()
 });
 
 export type ContactBody = z.infer<typeof contactSchema>;

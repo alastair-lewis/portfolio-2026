@@ -1,5 +1,5 @@
-import { SELF } from 'cloudflare:test';
-import { describe, it, expect } from 'vitest';
+import { SELF, fetchMock } from 'cloudflare:test';
+import { describe, it, expect, beforeAll, afterEach } from 'vitest';
 import '../src/index';
 
 const CONTACT_URL = 'https://example.com/v1/contact';
@@ -13,8 +13,43 @@ function postContact(body: unknown) {
   });
 }
 
+beforeAll(() => {
+  fetchMock.activate();
+  fetchMock.disableNetConnect();
+});
+
+afterEach(() => {
+  fetchMock.assertNoPendingInterceptors();
+});
+
+function mockResendSuccess() {
+  fetchMock
+    .get('https://api.resend.com')
+    .intercept({ path: '/emails', method: 'POST' })
+    .reply(200, JSON.stringify({ id: 'test-email-id' }), {
+      headers: { 'Content-Type': 'application/json' },
+    });
+}
+
+function mockResendFailure() {
+  fetchMock
+    .get('https://api.resend.com')
+    .intercept({ path: '/emails', method: 'POST' })
+    .reply(
+      422,
+      JSON.stringify({
+        statusCode: 422,
+        message: 'Invalid API key',
+        name: 'validation_error',
+      }),
+      { headers: { 'Content-Type': 'application/json' } }
+    );
+}
+
 describe('POST /contact', () => {
   it('returns success for a valid payload', async () => {
+    mockResendSuccess();
+
     const response = await postContact({
       name: 'Test User',
       email: 'test@example.com',
@@ -25,6 +60,22 @@ describe('POST /contact', () => {
     expect(await response.json()).toEqual({
       success: true,
       message: 'Message received',
+    });
+  });
+
+  it('returns 500 when email service fails', async () => {
+    mockResendFailure();
+
+    const response = await postContact({
+      name: 'Test User',
+      email: 'test@example.com',
+      message: 'Hello there',
+    });
+
+    expect(response.status).toBe(500);
+    expect(await response.json()).toEqual({
+      success: false,
+      error: 'Failed to send message',
     });
   });
 
@@ -127,4 +178,19 @@ describe('POST /contact', () => {
     const response = await SELF.fetch(CONTACT_URL);
     expect(response.status).toBe(404);
   });
+
+  it('returns 403 when hidden company field is provided', async () => {
+    const response = await postContact({
+      name: 'Test',
+      email: 'test@example.com',
+      message: 'test message',
+      company: 'test'
+    });
+
+    expect(response.status).toBe(403);
+    expect(await response.json()).toEqual({
+      success: false,
+      error: 'An error occurred',
+    });
+  })
 });
