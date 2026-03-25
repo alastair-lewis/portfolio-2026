@@ -42,6 +42,19 @@
   "contact": {
     "label": "Me contacter",
     "title": "Contact",
+    "form": {
+      "name_label": "Nom",
+      "name_placeholder": "Votre nom",
+      "email_label": "Courriel",
+      "email_placeholder": "votre@courriel.com",
+      "message_label": "Message",
+      "message_placeholder": "Que souhaitez-vous dire?",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Message envoy\u00e9! Je vous r\u00e9pondrai bient\u00f4t.",
+      "error": "Une erreur est survenue. Veuillez r\u00e9essayer.",
+      "divider": "ou contactez-moi directement"
+    },
     "email_cta": "M'envoyer un courriel",
     "github_cta": "GitHub",
     "linkedin_cta": "LinkedIn"

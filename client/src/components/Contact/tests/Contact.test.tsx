@@ -11,13 +11,6 @@ describe('Contact', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders the email CTA link', () => {
-    render(<Contact />);
-    expect(
-      screen.getByRole('link', {name: /send me an email/i}),
-    ).toHaveAttribute('href', 'mailto:alastair.lewis10@gmail.com');
-  });
-
   it('renders the GitHub link', () => {
     render(<Contact />);
     expect(screen.getByRole('link', {name: /github/i})).toHaveAttribute(
@@ -37,5 +30,12 @@ describe('Contact', () => {
   it('renders the section inside an id=contact element', () => {
     render(<Contact />);
     expect(document.getElementById('contact')).toBeInTheDocument();
+  });
+
+  it('renders the contact form', () => {
+    render(<Contact />);
+    expect(screen.getByLabelText(/name/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
   });
 });
