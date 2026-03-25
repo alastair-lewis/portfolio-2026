@@ -12,13 +12,11 @@ sixMonthsFromNow.setMonth(sixMonthsFromNow.getMonth() + 6);
 export const projects: Project[] = [
   {
     id: 'quickTransfers',
-    title: 'Quick Transfers',
+    title: '',
     logoFile: 'shopify_square.svg',
-    description: [
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.',
-    ],
+    description: [''],
     accentVariant: 3,
-    role: 'Project Champion & Senior Engineer',
+    role: '',
     comingSoon: true,
     tags: [
       {label: 'React', variant: 'coral'},

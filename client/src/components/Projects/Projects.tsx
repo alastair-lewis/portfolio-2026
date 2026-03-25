@@ -2,6 +2,7 @@ import {useTranslation} from 'react-i18next';
 
 import {projects} from '../../data/portfolio';
 import {classNames} from '../../utils/classNames';
+import {loremIpsum} from '../../utils/loremIpsum';
 import {Button} from '../ui/Button/Button';
 import {GlassCard} from '../ui/GlassCard/GlassCard';
 import {SectionHeader} from '../ui/SectionHeader/SectionHeader';
@@ -36,12 +37,20 @@ export function Projects() {
             <li key={project.id}>
               <GlassCard className={styles.card} as="article">
                 <div className={styles.cardTop}>
-                  <div>
+                  <div
+                    className={classNames(
+                      project.comingSoon && styles.redactedTitle,
+                    )}
+                  >
                     <h3 className={styles.cardTitle}>
-                      {t(`projects_data.${project.id}.title`)}
+                      {project.comingSoon
+                        ? loremIpsum(3)
+                        : t(`projects_data.${project.id}.title`)}
                     </h3>
                     <p className={styles.role}>
-                      {t(`projects_data.${project.id}.role`)}
+                      {project.comingSoon
+                        ? loremIpsum(5)
+                        : t(`projects_data.${project.id}.role`)}
                     </p>
                   </div>
                   {project.logoFile ? (
@@ -68,11 +77,8 @@ export function Projects() {
                     className={styles.redacted}
                   >
                     <div className={styles.desc} aria-hidden="true">
-                      {project.description.map((_para, i) => (
-                        <p key={i}>
-                          {t(`projects_data.${project.id}.desc_${i}`)}
-                        </p>
-                      ))}
+                      <p>{loremIpsum(20)}</p>
+                      <p>{loremIpsum(15)}</p>
                     </div>
                   </Tooltip>
                 ) : (
