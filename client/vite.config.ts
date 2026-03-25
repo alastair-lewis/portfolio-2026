@@ -11,5 +11,8 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./src/tests/setup.ts'],
     css: true,
+    env: {
+      VITE_API_BASE_URL: 'http://localhost:8787',
+    },
   },
 });
