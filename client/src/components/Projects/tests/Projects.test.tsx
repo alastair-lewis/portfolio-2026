@@ -69,4 +69,10 @@ describe('Projects', () => {
     render(<Projects />);
     expect(document.getElementById('projects')).toBeInTheDocument();
   });
+
+  it('renders a dot indicator for each project', () => {
+    render(<Projects />);
+    const dots = screen.getAllByRole('tab');
+    expect(dots).toHaveLength(projects.length);
+  });
 });

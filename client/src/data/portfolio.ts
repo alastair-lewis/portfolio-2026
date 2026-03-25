@@ -67,6 +67,48 @@ export const projects: Project[] = [
       {label: 'Redux', variant: 'coral'},
     ],
   },
+  {
+    id: 'comingSoon2',
+    title: '',
+    logoFile: 'shopify_square.svg',
+    description: [''],
+    accentVariant: 1,
+    role: '',
+    comingSoon: true,
+    tags: [
+      {label: 'React', variant: 'coral'},
+      {label: 'TypeScript', variant: 'teal'},
+      {label: 'Polaris', variant: 'orange'},
+    ],
+  },
+  {
+    id: 'comingSoon3',
+    title: '',
+    logoFile: 'shopify_square.svg',
+    description: [''],
+    accentVariant: 2,
+    role: '',
+    comingSoon: true,
+    tags: [
+      {label: 'Ruby', variant: 'coral'},
+      {label: 'Rails', variant: 'orange'},
+      {label: 'GraphQL', variant: 'teal'},
+    ],
+  },
+  {
+    id: 'comingSoon4',
+    title: '',
+    logoFile: 'shopify_square.svg',
+    description: [''],
+    accentVariant: 3,
+    role: '',
+    comingSoon: true,
+    tags: [
+      {label: 'React Native', variant: 'coral'},
+      {label: 'TypeScript', variant: 'teal'},
+      {label: 'Node.js', variant: 'orange'},
+    ],
+  },
 ];
 
 export const experience: ExperienceEntry[] = [
@@ -80,8 +122,8 @@ export const experience: ExperienceEntry[] = [
         period: '2024 -- Present',
         location: 'Toronto, ON',
         bullets: [
-          'Work on the Inventory team within Shopify\'s core platform, building foundational infrastructure that powers merchants across the globe.',
-          'Champion the technical direction of high-impact projects that expand Shopify\'s platform offering, driving GMV growth and merchant acquisition by solving real merchant business needs.',
+          "Work on the Inventory team within Shopify's core platform, building foundational infrastructure that powers merchants across the globe.",
+          "Champion the technical direction of high-impact projects that expand Shopify's platform offering, driving GMV growth and merchant acquisition by solving real merchant business needs.",
           'Mentor junior developers and help establish best practices and patterns across the team.',
         ],
       },
@@ -99,8 +141,8 @@ export const experience: ExperienceEntry[] = [
         bullets: [
           'One of the fastest-growing consultants in the firm, progressing from Associate to Managing Consultant within 4 years.',
           'Drove technical project delivery across a diverse portfolio of clients spanning major Canadian airlines, multiple major Canadian banks, and non-profits.',
-          'Led high-profile, high-visibility engagements under significant executive scrutiny, consistently delivering on IBM\'s most complex mandates.',
-          'Helped diversify and grow IBM\'s book of business across key accounts, expanding engagements into new workstreams and disciplines.',
+          "Led high-profile, high-visibility engagements under significant executive scrutiny, consistently delivering on IBM's most complex mandates.",
+          "Helped diversify and grow IBM's book of business across key accounts, expanding engagements into new workstreams and disciplines.",
           'Mentored incoming developers across the consulting practice, establishing technical standards and onboarding best practices.',
         ],
       },
@@ -109,9 +151,9 @@ export const experience: ExperienceEntry[] = [
         period: '2019',
         location: 'Markham, ON',
         bullets: [
-          'Developed a moonshot machine learning product over 4 months, leveraging neural networks to classify dangerous incoming server connections for IBM\'s Guardium security platform.',
+          "Developed a moonshot machine learning product over 4 months, leveraging neural networks to classify dangerous incoming server connections for IBM's Guardium security platform.",
           'Helped build the business case for the product and pitched it to a suite of IBM executives in New York City, receiving high praise.',
-          'A version of the project is now offered as part of IBM\'s security product portfolio.',
+          "A version of the project is now offered as part of IBM's security product portfolio.",
         ],
       },
     ],

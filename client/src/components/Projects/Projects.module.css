@@ -9,10 +9,55 @@
   margin: 0 auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* ---- Carousel ---- */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   gap: var(--space-6);
+  scrollbar-width: none;
+  padding-bottom: var(--space-2);
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel > li {
+  scroll-snap-align: start;
+  flex: 0 0 min(340px, 85vw);
+  min-width: 0;
+}
+
+/* ---- Dot indicators ---- */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--text-tertiary);
+  padding: 0;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.dot:hover {
+  background: var(--text-secondary);
+}
+
+.dotActive {
+  background: var(--text-primary);
+  transform: scale(1.25);
 }
 
 /* ---- Project card ---- */
@@ -21,6 +66,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .cardTop {
@@ -37,9 +84,15 @@
   flex-shrink: 0;
 }
 
-.accent1 { background: linear-gradient(135deg, var(--coral) 0%, var(--orange) 100%); }
-.accent2 { background: linear-gradient(135deg, var(--teal) 0%, var(--coral) 100%); }
-.accent3 { background: linear-gradient(135deg, var(--orange) 0%, var(--teal) 100%); }
+.accent1 {
+  background: linear-gradient(135deg, var(--coral) 0%, var(--orange) 100%);
+}
+.accent2 {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--coral) 100%);
+}
+.accent3 {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--teal) 100%);
+}
 
 .logo {
   height: 40px;
