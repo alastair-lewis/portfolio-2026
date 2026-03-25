@@ -4,6 +4,8 @@ import {render, screen} from '../../../tests/i18n-test-utils';
 import {Projects} from '../Projects';
 import {projects} from '../../../data/portfolio';
 
+const visibleProjects = projects.filter((p) => !p.comingSoon);
+
 describe('Projects', () => {
   it('renders the section heading', () => {
     render(<Projects />);
@@ -16,11 +18,21 @@ describe('Projects', () => {
     expect(articles).toHaveLength(projects.length);
   });
 
-  it('renders all project titles', () => {
+  it('renders titles for visible projects', () => {
     render(<Projects />);
-    for (const project of projects) {
+    for (const project of visibleProjects) {
       expect(screen.getByText(project.title)).toBeInTheDocument();
     }
+  });
+
+  it('renders lorem ipsum for in-progress projects', () => {
+    render(<Projects />);
+    const comingSoonProject = projects.find((p) => p.comingSoon);
+    if (!comingSoonProject) return;
+
+    const redactedTitle = document.querySelector('[class*="redactedTitle"]');
+    expect(redactedTitle).toBeInTheDocument();
+    expect(redactedTitle?.textContent).toMatch(/lorem ipsum/i);
   });
 
   it('renders a linked project name when a url is provided', () => {

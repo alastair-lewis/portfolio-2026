@@ -83,6 +83,12 @@
   flex: unset;
 }
 
+.redactedTitle {
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
