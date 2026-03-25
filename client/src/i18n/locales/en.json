@@ -42,6 +42,19 @@
   "contact": {
     "label": "Get In Touch",
     "title": "Contact",
+    "form": {
+      "name_label": "Name",
+      "name_placeholder": "Your name",
+      "email_label": "Email",
+      "email_placeholder": "your@email.com",
+      "message_label": "Message",
+      "message_placeholder": "What would you like to say?",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again.",
+      "divider": "or reach out directly"
+    },
     "email_cta": "Send me an email",
     "github_cta": "GitHub",
     "linkedin_cta": "LinkedIn"

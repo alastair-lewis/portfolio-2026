@@ -3,6 +3,7 @@ import {useTranslation} from 'react-i18next';
 import {Button} from '../ui/Button/Button';
 import {GlassCard} from '../ui/GlassCard/GlassCard';
 import {SectionHeader} from '../ui/SectionHeader/SectionHeader';
+import {ContactForm} from './ContactForm';
 import styles from './Contact.module.css';
 
 export function Contact() {
@@ -22,10 +23,15 @@ export function Contact() {
         />
 
         <GlassCard className={styles.card}>
+          <ContactForm />
+
+          <div className={styles.divider}>
+            <span className={styles.dividerText}>
+              {t('contact.form.divider')}
+            </span>
+          </div>
+
           <div className={styles.links}>
-            <Button variant="primary" href="mailto:alastair.lewis10@gmail.com">
-              {t('contact.email_cta')}
-            </Button>
             <Button
               variant="secondary"
               href="https://github.com/alastair-lewis"

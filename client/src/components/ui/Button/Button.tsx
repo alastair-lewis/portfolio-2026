@@ -12,6 +12,8 @@ interface ButtonProps {
   /** Passed to <a> targets — defaults to _blank for external links */
   target?: string;
   rel?: string;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export function Button({
@@ -22,8 +24,15 @@ export function Button({
   className,
   target,
   rel,
+  type = 'button',
+  disabled,
 }: ButtonProps) {
-  const cls = classNames(styles.button, styles[variant], className);
+  const cls = classNames(
+    styles.button,
+    styles[variant],
+    disabled ? styles.disabled : undefined,
+    className,
+  );
 
   if (href) {
     const isExternal = href.startsWith('http');
@@ -40,7 +49,7 @@ export function Button({
   }
 
   return (
-    <button type="button" className={cls} onClick={onClick}>
+    <button type={type} className={cls} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

@@ -50,4 +50,14 @@ describe('Button', () => {
     render(<Button className="custom">Styled</Button>);
     expect(screen.getByRole('button')).toHaveClass('custom');
   });
+
+  it('renders with type="submit"', () => {
+    render(<Button type="submit">Submit</Button>);
+    expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
+  });
+
+  it('renders as disabled when disabled prop is true', () => {
+    render(<Button disabled>Disabled</Button>);
+    expect(screen.getByRole('button')).toBeDisabled();
+  });
 });
